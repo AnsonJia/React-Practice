@@ -2,6 +2,7 @@ import Card from './Card.tsx'
 import List, { ListProps } from './List.tsx'
 import Counter from './counter.tsx'
 import OrderInfo from './OrderInfo.tsx';
+import ColorPicker from './ColorPicker.tsx';
 
 function App() {
   let listItems = ["item 1", "item 2", "item 3", "item 4 ", "item 5"];
@@ -18,6 +19,8 @@ function App() {
     <Counter/>
     <br/>
     <OrderInfo/>
+    <br/>
+    <ColorPicker/>
     </>
     
   );
