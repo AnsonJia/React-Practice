@@ -16,6 +16,7 @@ function App() {
     <ListProps items={items} heading="Cities"/>
     <br/>
     <Counter/>
+    <br/>
     <OrderInfo/>
     </>
     
