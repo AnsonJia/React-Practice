@@ -30,7 +30,7 @@ function OrderInfo(){
 
 
     return (
-        <div>
+        <div className="order">
             <h1>Order Item</h1>
             <input value={name} onChange={NameChange} placeholder="Enter Item"/>
             <p>Item Ordered: {name}</p>
