@@ -23,6 +23,12 @@
     transition: background-color 0.5s ease;
 }
 
+.toDoList .delButton, .toDoList .moveButton{
+    padding: 8px 12px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
 .addButton{
     background-color: rgb(97, 211, 82);
 }
@@ -72,11 +78,6 @@
     flex:1;
 }
 
-.delButton, .moveButton{
-    padding: 8px 12px;
-    font-size: 1.4rem;
-    margin-left: 10px;
-}
 
 .toDoList body {
     margin: 0;

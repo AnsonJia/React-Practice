@@ -2,7 +2,7 @@ import { useState } from "react"
 import styles from './toDoList.module.css'
 
 function toDoList(){
-    const [tasks, setTasks] = useState(["item1", "item2"]);
+    const [tasks, setTasks] = useState(["Task 1", "Task 2", "Task 3"]);
     const [newTask, setNewTask] = useState("");
 
     function InputChange(event:any){
@@ -16,17 +16,25 @@ function toDoList(){
         }
     }
 
-    function deleteTask(index){
-        const updatedTask = tasks.filter((_, i) => i !== index)
-        setTasks(updatedTask)
+    function deleteTask(index:number){
+        const updatedTask = tasks.filter((_, i) => i !== index);
+        setTasks(updatedTask);
     }
 
-    function moveTaskUp(index){
-        
+    function moveTaskUp(index:number){
+        if(index > 0){
+            const updatedTask = [...tasks];
+            [updatedTask[index], updatedTask[index-1]] = [updatedTask[index-1], updatedTask[index]];
+            setTasks(updatedTask);
+        }
     }
 
-    function moveTaskDown(index){
-        
+    function moveTaskDown(index:number){
+        if(index < tasks.length-1){
+            const updatedTask = [...tasks];
+            [updatedTask[index], updatedTask[index+1]] = [updatedTask[index+1], updatedTask[index]];
+            setTasks(updatedTask);
+        }
     }
 
     return(<div className={styles.toDoList}>
