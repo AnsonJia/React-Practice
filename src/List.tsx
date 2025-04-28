@@ -91,7 +91,7 @@ export function ListProps({items, set, heading}: Props){
         ))}
 
         <input type = "text" value={newItem} onChange={(e) => setNewItem(e.target.value)} placeholder="Enter New List Entry"/>
-        <button onClick={addItem}>Add Item</button>
+        <button className="addList" onClick={addItem}>Add Item</button>
         
         
         </>
