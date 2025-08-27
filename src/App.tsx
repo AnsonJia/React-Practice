@@ -5,7 +5,7 @@ import Counter from './counter.tsx'
 import OrderInfo from './OrderInfo.tsx';
 import ColorPicker from './ColorPicker.tsx';
 import ToDoList from './toDoList.tsx';
-
+import GetData from './FetchDB.tsx';
 
 function App() {
   const [listItems, setlistItems] = useState(["item 1", "item 2", "item 3", "item 4 ", "item 5"]);
@@ -26,6 +26,8 @@ function App() {
     <ColorPicker/>
     <br/>
     <ToDoList/>
+    <br/>
+    <GetData/>
     </>
     
   );
